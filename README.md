@@ -23,10 +23,22 @@ resolve: {
 - Aggiungiamo `import "~resources/scss/app.scss";` al file  `resources/js/app.js`
 - Aggiungiamo `@vite("resources/js/app.js")` ad ogni layout della nostra applicazione
 - Aggiungiamo a `resources/js/app.js` una direttiva per la corretta gestione delle immagini
-```
-  import.meta.glob([
-      '../img/**'
-  ]);
-```
+    ```
+    import.meta.glob([
+        '../img/**'
+    ]);
+    ```
 - Aggiungiamo la riga `package-lock.json` al file `.gitignore`
 
+## Aggiungiamo Bootstrap 5 al nostro progetto
+- Installiamo attraverso npm i due pacchetti necessari a Bootstrap `npm i bootstrap @popperjs/core`
+- Aggiungo in cima al file `vite.config.js` questa riga `const path = require("path");`
+- Aggiungo agli alias sempre in `vite.config.js`
+    ```
+    alias: {
+                '~resources' : "/resources/",
+                '~bootstrap' : path.resolve(__dirname, "node_modules/bootstrap")
+            }
+    ```
+- Aggiungiamo `@use "~bootstrap/scss/bootstrap" as *;` al nostro file `app.scss`
+- Aggiungiamo `import * as bootstrap from "bootstrap";` al nostro file `app.js`

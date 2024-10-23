@@ -7,6 +7,8 @@
 
 Prima di tutto eseguiamo il solito comando di installazione di npm
 
+- Creiamo il nostro progetto `composer create-project laravel/laravel:^10.0 example-app`, dove `example-app` e' il nome del nostro progetto
+- Entriamo nella cartella del progetto `cd example-app`
 - Eseguiamo `npm install`
 - Eseguiamo il comando per aggiungere sass `npm i --save-dev sass` o  `npm install -D sass`
 - Modifichiamo la cartella `resources/css` in `resources/scss` 
